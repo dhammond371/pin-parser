@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "jest-w": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,15 @@
   },
   "homepage": "https://github.com/dhammond371/pin-parser#readme",
   "devDependencies": {
+    "@types/jest": "^29.4.0",
     "prettier": "^2.8.4",
+    "ts-jest": "^29.0.5",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "jest": "^29.4.3",
+    "tall": "^8.0.0"
   }
 }
