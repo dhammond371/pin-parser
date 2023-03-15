@@ -5,7 +5,7 @@ export interface PinParserResult {
     lng?: string,
 }
 
-export async function parsePin(pin: string): Promise<PinParserResult> {
+export async function ParsePin(pin: string): Promise<PinParserResult> {
     if (pin == null) return { success: false };
 
     // Handle the form: '12.3456,78.91011' or '(12.3456,78.91011)'
