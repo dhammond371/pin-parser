@@ -11,8 +11,8 @@ export async function ParsePin(pin: string): Promise<PinParserResult> {
     // Handle the form: '12.3456,78.91011' or '(12.3456,78.91011)'
     const splitByComma = pin.replace(/\s/g, '').split(',').map(a => a.replace('(', '').replace(')', ''));
     if (
-        !Number.isNaN(+splitByComma?.[0]) &&
-        !Number.isNaN(+splitByComma?.[1]) &&
+        !Number.isNaN(+(splitByComma?.[0] as string)) &&
+        !Number.isNaN(+(splitByComma?.[1] as string)) &&
         splitByComma?.[0] != null &&
         splitByComma?.[1] != null
         ) {
@@ -27,7 +27,7 @@ export async function ParsePin(pin: string): Promise<PinParserResult> {
     // handle apple maps link: https://maps.apple.com/?ll=54.745391,-110.146062&q=Dropped%20Pin&t=m
     if (pin.slice(0, 4) === 'http') {
         return tall(pin)
-            .then(unshortenedUrl => {
+            .then((unshortenedUrl: string) => {
                 const latLng = unshortenedUrl.match(/-?\d+(?:\.\d+)?,\s*-?\d+(?:\.\d+)?/g)?.[0];
                 const split = latLng?.split(',');
                 const lat = split?.[0];
