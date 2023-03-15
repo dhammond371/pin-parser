@@ -4,19 +4,24 @@
   "description": "A simple tool to return the latitude and longitude from a copied Google or Apple maps pin",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "jest-w": "jest --watch",
-    "prepublish": "tsc"
+    "prepublish": "tsc",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dhammond371/pin-parser.git"
   },
-  "files": ["dist", "README.md", "package.json"],
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
   "author": "dhammond371",
   "license": "ISC",
   "bugs": {
