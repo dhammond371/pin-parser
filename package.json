@@ -1,10 +1,10 @@
 {
   "name": "pin-parser",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A simple tool to return the latitude and longitude from a copied Google or Apple maps pin",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
