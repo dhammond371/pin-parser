@@ -7,7 +7,8 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "jest-w": "jest --watch"
+    "jest-w": "jest --watch",
+    "prepublish": "tsc"
   },
   "repository": {
     "type": "git",
