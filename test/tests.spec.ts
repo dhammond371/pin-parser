@@ -1,4 +1,4 @@
-import { ParsePin } from ".";
+import { ParsePin } from "../src";
 
 describe('PinParser', () => {
     
