@@ -1,7 +1,7 @@
 {
   "name": "pin-parser",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple tool to return the latitude and longitude from a copied Google or Apple maps pin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
